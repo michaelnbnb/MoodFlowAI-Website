@@ -94,7 +94,7 @@
     "zh-TW": ["心情管理", "健康管理", "喝水提醒", "心情日記", "AI看圖說話", "智能健康", "情緒管理", "健康助手", "心情記錄", "AI助手", "健康應用", "心理健康", "生活助手", "智能提醒", "健康監測"],
     "en": ["mood management", "health management", "water reminder", "mood diary", "AI image description", "smart health", "emotion management", "health assistant", "mood tracking", "AI assistant", "health app", "mental health", "life assistant", "smart reminder", "health monitoring"]
   },
-  "last_updated": "2024-12-19",
+  "last_updated": "2025-07",
   "version": "1.0",
   "ai_crawl_friendly": {
     "structured_data": true,
