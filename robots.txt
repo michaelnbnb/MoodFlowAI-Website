@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /ai-data.json
+
+# AI数据文件位置
+Sitemap: https://www.moodflowai.com/ai-data.json
+
+# 专门为AI爬虫提供的数据端点
+# AI-Data-Endpoint: /ai-data.json

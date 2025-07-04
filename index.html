@@ -9,6 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- AI可抓取的结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "MoodFlowAI",
+      "description": "智能健康与心情管理应用，提供喝水提醒、心情日记和AI看图说话功能",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": ["iOS", "Android"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "万有生化智能科技（深圳）有限公司"
+      },
+      "url": "https://www.moodflowai.com",
+      "sameAs": [
+        "https://www.moodflowai.com/ai-data.json"
+      ]
+    }
+    </script>
+    
+    <!-- 指向AI数据文件的链接 -->
+    <link rel="alternate" type="application/json" href="/ai-data.json" title="AI Data Feed">
 </head>
 <body>
     <!-- Navigation -->

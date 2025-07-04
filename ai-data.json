@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": ["iOS", "Android"],
+  "name": "MoodFlowAI",
+  "alternateName": ["心情流AI", "MoodFlow AI", "心情管理应用"],
+  "description": {
+    "zh-CN": "MoodFlowAI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
+    "zh-TW": "MoodFlowAI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
+    "en": "MoodFlowAI is an intelligent health and mood management application that integrates three core functions: water reminder, mood diary, and AI image description, helping users establish healthy lifestyle habits, record emotional states, and provide intelligent life assistant services through AI technology."
+  },
+  "features": {
+    "core_functions": [
+      {
+        "name": {
+          "zh-CN": "智能喝水提醒",
+          "zh-TW": "智能喝水提醒",
+          "en": "Smart Water Reminder"
+        },
+        "description": {
+          "zh-CN": "个性化喝水计划，智能提醒用户按时补充水分，养成健康饮水习惯",
+          "zh-TW": "個性化喝水計劃，智能提醒用戶按時補充水分，養成健康飲水習慣",
+          "en": "Personalized hydration plan with smart reminders to help users maintain healthy drinking habits"
+        },
+        "keywords": ["喝水提醒", "健康管理", "water reminder", "hydration tracking"]
+      },
+      {
+        "name": {
+          "zh-CN": "心情日记",
+          "zh-TW": "心情日記",
+          "en": "Mood Diary"
+        },
+        "description": {
+          "zh-CN": "简单易用的心情记录工具，帮助用户追踪情感变化，建立心理健康档案",
+          "zh-TW": "簡單易用的心情記錄工具，幫助用戶追蹤情感變化，建立心理健康檔案",
+          "en": "Easy-to-use mood tracking tool that helps users monitor emotional changes and build mental health profiles"
+        },
+        "keywords": ["心情记录", "情绪管理", "mood tracking", "emotional wellness"]
+      },
+      {
+        "name": {
+          "zh-CN": "AI看图说话",
+          "zh-TW": "AI看圖說話",
+          "en": "AI Image Description"
+        },
+        "description": {
+          "zh-CN": "基于人工智能的图像识别和描述功能，为用户的照片生成有趣的文字描述",
+          "zh-TW": "基於人工智能的圖像識別和描述功能，為用戶的照片生成有趣的文字描述",
+          "en": "AI-powered image recognition and description feature that generates interesting text descriptions for user photos"
+        },
+        "keywords": ["AI图像识别", "看图说话", "AI image recognition", "photo description"]
+      }
+    ]
+  },
+  "target_audience": {
+    "primary": {
+      "zh-CN": "关注健康生活和情感管理的用户",
+      "zh-TW": "關注健康生活和情感管理的用戶",
+      "en": "Users focused on healthy living and emotional management"
+    },
+    "demographics": ["年轻人", "上班族", "健康意识用户", "情感记录爱好者"]
+  },
+  "technical_info": {
+    "platforms": ["iOS", "Android"],
+    "ai_technology": {
+      "image_recognition": true,
+      "natural_language_processing": true,
+      "machine_learning": true
+    },
+    "data_privacy": {
+      "local_storage": true,
+      "encryption": true,
+      "gdpr_compliant": true
+    }
+  },
+  "website": {
+    "url": "https://www.moodflowai.com",
+    "languages": ["zh-CN", "zh-TW", "en"],
+    "pages": {
+      "main": "index.html",
+      "privacy": ["privacy-zh.html", "privacy-tw.html", "privacy-en.html"],
+      "support": ["support-zh.html", "support-tw.html", "support-en.html"]
+    }
+  },
+  "company": {
+    "name": "万有生化智能科技（深圳）有限公司",
+    "location": "深圳, 中国",
+    "industry": "健康科技",
+    "focus": "AI驱动的健康管理解决方案"
+  },
+  "seo_keywords": {
+    "zh-CN": ["心情管理", "健康管理", "喝水提醒", "心情日记", "AI看图说话", "智能健康", "情绪管理", "健康助手", "心情记录", "AI助手", "健康应用", "心理健康", "生活助手", "智能提醒", "健康监测"],
+    "zh-TW": ["心情管理", "健康管理", "喝水提醒", "心情日記", "AI看圖說話", "智能健康", "情緒管理", "健康助手", "心情記錄", "AI助手", "健康應用", "心理健康", "生活助手", "智能提醒", "健康監測"],
+    "en": ["mood management", "health management", "water reminder", "mood diary", "AI image description", "smart health", "emotion management", "health assistant", "mood tracking", "AI assistant", "health app", "mental health", "life assistant", "smart reminder", "health monitoring"]
+  },
+  "last_updated": "2024-12-19",
+  "version": "1.0",
+  "ai_crawl_friendly": {
+    "structured_data": true,
+    "machine_readable": true,
+    "multilingual": true,
+    "comprehensive_info": true
+  }
+}
