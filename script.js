@@ -3,8 +3,9 @@ const translations = {
     'zh-CN': {
         'nav.features': '功能特色',
         'nav.download': '立即下载',
-        'hero.title': '心情流AI - 你的智能健康与心情管家!',
-        'hero.subtitle': '还在为忘记喝水而烦恼？想记录心情却懒得写长篇日记？拍照后不知道配什么文字？心情流AI来帮你！',
+        'hero.title': '心情流AI',
+        'hero.subtitle_main': '你的智能健康与心情管家!',
+        'hero.subtitle': '还在为忘记喝水而烦恼？\n想记录心情却懒得写长篇日记？\n拍照后不知道配什么文字？\n\n心情流AI来帮你！',
         'hero.download': '立即下载',
         'hero.learn_more': '了解更多',
         'features.title': '三大核心功能',
@@ -24,16 +25,18 @@ const translations = {
         'download.app_store_name': 'App Store',
         'download.qr': '扫码下载',
         'download.note': '目前仅支持 iOS 系统，Android 版本敬请期待',
+        'footer.about': '关于APP',
         'footer.support': '技术支持',
         'footer.privacy': '隐私政策',
         'footer.terms': '使用条款',
-        'footer.copyright': '© 2024 MoodFlowAI. 保留所有权利。'
+        'footer.copyright': '© 2025 MoodFlow AI. 保留所有权利。'
     },
     'zh-TW': {
         'nav.features': '功能特色',
         'nav.download': '立即下載',
-        'hero.title': '心情流AI - 你的智能健康與心情管家!',
-        'hero.subtitle': '還在為忘記喝水而煩惱？想記錄心情卻懶得寫長篇日記？拍照後不知道配什麼文字？心情流AI來幫你！',
+        'hero.title': '心情流AI',
+        'hero.subtitle_main': '你的智能健康與心情管家!',
+        'hero.subtitle': '還在為忘記喝水而煩惱？\n想記錄心情卻懶得寫長篇日記？\n拍照後不知道配什麼文字？\n\n心情流AI來幫你！',
         'hero.download': '立即下載',
         'hero.learn_more': '了解更多',
         'features.title': '三大核心功能',
@@ -53,16 +56,18 @@ const translations = {
         'download.app_store_name': 'App Store',
         'download.qr': '掃碼下載',
         'download.note': '目前僅支持 iOS 系統，Android 版本敬請期待',
+        'footer.about': '關於APP',
         'footer.support': '技術支持',
         'footer.privacy': '隱私政策',
         'footer.terms': '使用條款',
-        'footer.copyright': '© 2024 MoodFlowAI. 保留所有權利。'
+        'footer.copyright': '© 2025 MoodFlow AI. 保留所有權利。'
     },
     'en': {
         'nav.features': 'Features',
         'nav.download': 'Download',
-        'hero.title': 'MoodFlowAI - Your Smart Health & Mood Manager!',
-        'hero.subtitle': 'Tired of forgetting to drink water? Want to journal but too lazy to write long entries? Don\'t know what to caption your photos? MoodFlowAI is here to help!',
+        'hero.title': 'MoodFlow AI',
+        'hero.subtitle_main': 'Your Smart Health & Mood Companion!',
+        'hero.subtitle': 'Forget to drink water?\nToo busy to journal?\nStuck on captions for photos?\n\nMoodFlow AI has you covered!',
         'hero.download': 'Download Now',
         'hero.learn_more': 'Learn More',
         'features.title': 'Three Core Features',
@@ -82,10 +87,11 @@ const translations = {
         'download.app_store_name': 'App Store',
         'download.qr': 'Scan to Download',
         'download.note': 'Currently available for iOS only, Android version coming soon',
+        'footer.about': 'About',
         'footer.support': 'Support',
         'footer.privacy': 'Privacy Policy',
         'footer.terms': 'Terms of Service',
-        'footer.copyright': '© 2024 MoodFlowAI. All rights reserved.'
+        'footer.copyright': '© 2025 MoodFlow AI. All rights reserved.'
     }
 };
 
@@ -124,9 +130,9 @@ function applyLanguage(lang) {
     
     // 更新页面标题
     const titles = {
-        'zh-CN': 'MoodFlowAI - 你的智能健康与心情管家',
-        'zh-TW': 'MoodFlowAI - 你的智能健康與心情管家',
-        'en': 'MoodFlowAI - Your Smart Health & Mood Manager'
+        'zh-CN': 'MoodFlow AI - 你的智能健康与心情管家',
+        'zh-TW': 'MoodFlow AI - 你的智能健康與心情管家',
+        'en': 'MoodFlow AI - Your Smart Health & Mood Companion'
     };
     document.title = titles[lang];
     
@@ -136,6 +142,20 @@ function applyLanguage(lang) {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
             element.textContent = translations[lang][key];
+        }
+    });
+    
+    // 更新所有带有data-translate属性的元素
+    const translateElements = document.querySelectorAll('[data-translate]');
+    translateElements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            // 保留换行符格式
+            if (key === 'hero.subtitle') {
+                element.innerHTML = translations[lang][key].replace(/\\n/g, '<br>');
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
     });
     
@@ -173,6 +193,17 @@ function applyLanguage(lang) {
         };
         supportLink.href = supportUrls[lang] || 'support-en.html';
     }
+    
+    // 更新关于APP链接
+    const aboutLink = document.querySelector('a[data-i18n="footer.about"]');
+    if (aboutLink) {
+        const aboutUrls = {
+            'zh-CN': 'about-zh.html',
+            'zh-TW': 'about-tw.html',
+            'en': 'about-en.html'
+        };
+        aboutLink.href = aboutUrls[lang] || 'about-en.html';
+    }
 }
 
 // 绑定语言切换事件
@@ -181,6 +212,11 @@ function bindLanguageSwitcher() {
     const dropdownBtn = document.querySelector('.dropdown-btn');
     const dropdownMenu = document.querySelector('.dropdown-menu');
     const langText = document.querySelector('.lang-text');
+    
+    if (!dropdown || !dropdownBtn || !dropdownMenu || !langText) {
+        console.error('Language switcher elements not found');
+        return;
+    }
     
     // 切换下拉菜单显示/隐藏
     dropdownBtn.addEventListener('click', function(e) {
@@ -255,46 +291,13 @@ function bindSmoothScroll() {
 // 导航栏滚动效果
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
     }
 });
-
-// 移动端菜单切换（如果需要）
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-}
-
-// 错误处理
-window.addEventListener('error', function(e) {
-    console.error('页面错误:', e.error);
-});
-
-// 图片懒加载
-function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// 页面加载完成后执行懒加载
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', lazyLoadImages);
-} else {
-    lazyLoadImages();
-}

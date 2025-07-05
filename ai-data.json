@@ -3,12 +3,12 @@
   "@type": "MobileApplication",
   "applicationCategory": "HealthApplication",
   "operatingSystem": ["iOS", "Android"],
-  "name": "MoodFlowAI",
+  "name": "MoodFlow AI",
   "alternateName": ["心情流AI", "MoodFlow AI", "心情管理应用"],
   "description": {
-    "zh-CN": "MoodFlowAI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
-    "zh-TW": "MoodFlowAI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
-    "en": "MoodFlowAI is an intelligent health and mood management application that integrates three core functions: water reminder, mood diary, and AI image description, helping users establish healthy lifestyle habits, record emotional states, and provide intelligent life assistant services through AI technology."
+    "zh-CN": "MoodFlow AI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
+    "zh-TW": "MoodFlow AI是一款智能健康与心情管理应用，集成喝水提醒、心情日记和AI看图说话三大核心功能，帮助用户建立健康生活习惯，记录情感状态，并通过AI技术提供智能化的生活助手服务。",
+    "en": "MoodFlow AI is an intelligent health and mood management application that integrates three core functions: water reminder, mood diary, and AI image description, helping users establish healthy lifestyle habits, record emotional states, and provide intelligent life assistant services through AI technology."
   },
   "features": {
     "core_functions": [
